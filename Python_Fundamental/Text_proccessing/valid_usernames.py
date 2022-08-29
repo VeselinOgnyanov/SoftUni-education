@@ -1,12 +1,22 @@
 usernames = input().split(", ")
 validated_usernames = []
+valid_name = True
 
 for current_username in usernames:
-    if (len(current_username) >= 3) and (len(current_username) <= 16):
-        for single_char in current_username:
-            if (single_char != single_char.isdigit()) and (single_char != single_char.isalpha()) and (single_char != "_") and (single_char != "-"):
-                break
-        if " " not in current_username:
-            validated_usernames.append(current_username)
+    is_alphanum = False
+    if (len(current_username) < 3) or (len(current_username) > 16):
+        continue
+    if " " in current_username:
+        continue
+    for current_char in current_username:
+        is_alphanum = current_char.isalnum()
+        if not is_alphanum and current_char != "-" and current_char != "_":
+            valid_name = False
+            break
+    if valid_name:
+        validated_usernames.append(current_username)
+    valid_name = True
 
-print(validated_usernames)
+for current_username in validated_usernames:
+    print(current_username)
+
