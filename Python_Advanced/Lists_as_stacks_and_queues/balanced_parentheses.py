@@ -1,4 +1,16 @@
-from collections import deque
+def removing_first_and_last_element(current_list):
+    new_list = list(current_list)
+    new_list.pop(0)
+    new_list.pop(-1)
+    return new_list
+
+
+def removing_first_and_second_element(current_list):
+    new_list = list(current_list)
+    new_list.pop(0)
+    new_list.pop(0)
+    return new_list
+
 
 parentheses = input()
 parentheses_list = []
@@ -8,32 +20,39 @@ for element in parentheses:
     parentheses_list.append(element)
 
 for _ in range(len(parentheses)):
-    if parentheses_list == 1:
+    if len(parentheses_list) == 1:
         balanced = False
-    if parentheses_list:
+        break
+    elif parentheses_list:
         first_element = parentheses_list[0]
+        second_element = parentheses_list[1]
         last_element = parentheses_list[-1]
-        if first_element in ["{", "(", "["]:
-            if last_element == "}":
-                if parentheses_list:
-                    parentheses_list.pop(0)
-                    parentheses_list.pop()
-                else:
-                    balanced = False
-                    break
+        if first_element == "{":
+            if second_element == "}":
+                parentheses_list = removing_first_and_second_element(parentheses_list)
+            elif last_element == "}":
+                parentheses_list = removing_first_and_last_element(parentheses_list)
+            else:
+                balanced = False
+                break
+        elif first_element == "[":
+            if second_element == "]":
+                parentheses_list = removing_first_and_second_element(parentheses_list)
             elif last_element == "]":
-                if parentheses_list:
-                    parentheses_list.pop(0)
-                    parentheses_list.pop()
-                else:
-                    balanced = False
-                    break
+                parentheses_list = removing_first_and_last_element(parentheses_list)
+            else:
+                balanced = False
+                break
+        elif first_element == "(":
+            if second_element == ")":
+                parentheses_list = removing_first_and_second_element(parentheses_list)
             elif last_element == ")":
-                if parentheses_list:
-                    parentheses_list.pop(0)
-                    parentheses_list.pop()
-                else:
-                    balanced = False
-                    break
+                parentheses_list = removing_first_and_last_element(parentheses_list)
+            else:
+                balanced = False
+                break
+        else:
+            balanced = False
+            break
 
 print("YES" if balanced else "NO")
