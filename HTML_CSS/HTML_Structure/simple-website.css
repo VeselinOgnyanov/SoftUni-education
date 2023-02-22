@@ -1,0 +1,46 @@
+body {
+  background-color: #cccccc;
+}
+
+article {
+  padding: 10px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+footer {
+  text-align: center;
+  background-color: #444;
+  color: #ffffff;
+  padding: 10px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+li {
+  font-size: 24px;
+  line-height: 40px;
+  height: 40px;
+  padding: 20px;
+  display: inline-block;
+}
+
+ul {
+  background-color: #444;
+  text-align: center;
+  list-style: none;
+}
+
+p {
+  font-size: 24px;
+}
+
+article .italic {
+  font-style: italic;
+  font-size: medium;
+}

@@ -1,0 +1,128 @@
+@import "https://use.fontawesome.com/releases/v5.6.3/css/all.css";
+
+*{
+    white-space: none;
+}
+
+body {
+  background-color: #fce1ae;
+  padding: 20px;
+  font-family: "Montserrat";
+}
+
+img {
+  width: 200px;
+  height: 100px;
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(180px 20px 180px 20px);
+  gap: 20px;
+  grid-template-areas:
+    "music celeb"
+    "txt-music txt-celeb"
+    "show art"
+    "txt-show txt-art";
+
+}
+
+.first-image {
+  grid-area: music;
+}
+
+.first-image-txt {
+  grid-area: txt-music;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  padding-left: 5px;
+}
+
+.second-image {
+  grid-area: celeb;
+}
+
+.second-image-txt {
+  grid-area: txt-celeb;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  padding-left: 5px;
+}
+
+.third-image {
+  grid-area: show;
+}
+
+.third-image-txt {
+  grid-area: txt-show;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  padding-left: 5px;
+}
+
+.fourth-image {
+  grid-area: art;
+}
+
+.fourth-image-txt {
+  grid-area: txt-art;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  padding-left: 5px;
+}
+
+.main-article {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  padding-left: 5px;
+  width: 200px;
+  color: #695257;
+  
+}
+
+.first-section,
+.second-section,
+.third-section,
+.fourth-section {
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #695257;
+  box-shadow: 3px 3px 30px 3px grey;
+}
+
+li{
+    list-style-type: none;
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+i{
+    color: #695257;
+    margin-right: 10px;
+}
+
+ul{
+    margin: 0px;
+    padding-left: 25px;
+}
+
+.ul-text{
+    font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
