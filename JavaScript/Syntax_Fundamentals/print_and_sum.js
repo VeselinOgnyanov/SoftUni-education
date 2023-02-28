@@ -11,4 +11,4 @@ function solve(startNumber, endNumber) {
     console.log(`Sum: ${totalSum}`)
 }
 
-solve(5, 10)
+// solve(5, 10)
