@@ -6,4 +6,4 @@ function solve (currentNumber){
     }
 }
 
-solve(5)
+// solve(5)
