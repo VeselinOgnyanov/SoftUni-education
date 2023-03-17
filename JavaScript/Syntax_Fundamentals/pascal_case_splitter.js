@@ -7,20 +7,19 @@ function solve(sentence) {
     for (const iterator of sentence) {
         let currentLetter = iterator.charCodeAt(0)
         if (currentLetter >= 65 && currentLetter <= 90) {
-            counter += 1
-            if(counter === 2){
-                currentList.push(currentString)
-                currentString = ""
-                counter = 1
+            if (currentString.length > 0) {
+                currentString += ", " + iterator
+            } else {
+                currentString += iterator
             }
-            currentString += iterator
+            
         } else {
             currentString += iterator
         }
     }
-result = currentList.join(", ")
-console.log(result)
+    
+    console.log(currentString)
 }
 
-// solve("SplitMeIfYouCanHaHaYouCantOrYouCan")
+solve("SplitMeIfYouCanHaHaYouCantOrYouCan")
 solve("HoldTheDoor")
