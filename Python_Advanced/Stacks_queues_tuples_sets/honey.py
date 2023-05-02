@@ -26,5 +26,5 @@ if working_bees:
     final_bees = ", ".join(map(str, working_bees))
     print(f"Bees left: {final_bees}")
 if nectar:
-    final_nectar = ", ".join(map(str,nectar))
+    final_nectar = ", ".join(map(str, nectar))
     print(f"Nectar left: {final_nectar}")
