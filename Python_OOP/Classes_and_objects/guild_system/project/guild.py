@@ -17,10 +17,13 @@ class Guild:
             return f"Welcome player {player.name} to the guild {self.name}"
 
     def kick_player(self, player_name: str):
-        if player_name not in self.players:
+        list_of_players = [player.name for player in self.players]
+        if player_name not in list_of_players:
             return f"Player {player_name} is not in the guild."
         else:
-            self.players.remove(player_name)
+            filtered_object = list(filter(lambda object: object.name == player_name, self.players))
+            print(filtered_object)
+            self.players.remove(filtered_object[0])
             return f"Player {player_name} has been removed from the guild."
 
     def guild_info(self):
