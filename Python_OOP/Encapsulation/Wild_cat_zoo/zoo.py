@@ -1,4 +1,3 @@
-
 from animal import Animal
 from caretaker import Caretaker
 from cheetah import Cheetah
@@ -80,9 +79,9 @@ class Zoo:
 
     def workers_status(self):
 
-        list_of_keepers = list(filter(lambda a: a.__class__.__name__ == "Lion", self.animals))
-        list_of_caretakers = list(filter(lambda a: a.__class__.__name__ == "Tiger", self.animals))
-        list_of_vets = list(filter(lambda a: a.__class__.__name__ == "Cheetah", self.animals))
+        list_of_keepers = list(filter(lambda a: a.__class__.__name__ == "Keeper", self.workers))
+        list_of_caretakers = list(filter(lambda a: a.__class__.__name__ == "Caretaker", self.workers))
+        list_of_vets = list(filter(lambda a: a.__class__.__name__ == "Vet", self.workers))
 
         status_to_print = [
             f"You have {len(self.workers)} workers",
@@ -97,7 +96,6 @@ class Zoo:
         status_to_print.extend(list_of_vets)
 
         return "\n".join(str(element) for element in status_to_print)
-
 
 # zoo = Zoo("Zootopia", 3000, 5, 8)
 
