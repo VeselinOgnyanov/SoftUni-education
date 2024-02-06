@@ -1,4 +1,4 @@
-from desert import Desert
+from food.desert import Desert
 
 
 class Cake(Desert):

@@ -1,4 +1,4 @@
-from hot_beverages import HotBeverages
+from beverage.hot_beverages import HotBeverages
 
 
 class Tea(HotBeverages):

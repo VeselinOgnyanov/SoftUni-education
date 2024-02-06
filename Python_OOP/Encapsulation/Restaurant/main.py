@@ -4,6 +4,7 @@ from product import Product
 
 
 def run():
+
     product = Product("coffee", 2.5)
     print(product.__class__.__name__)
     print(product.name)
@@ -20,6 +21,7 @@ def run():
     print(soup.name)
     print(soup.price)
     print(soup.grams)
+
 
 
 if __name__ == '__main__':

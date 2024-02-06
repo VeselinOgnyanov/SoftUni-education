@@ -9,3 +9,7 @@ class Food(Product):
     @property
     def grams(self):
         return self.__grams
+
+
+# test_food = Food("asd", 12, 123)
+# print(test_food)

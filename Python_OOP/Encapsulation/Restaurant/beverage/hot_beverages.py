@@ -1,4 +1,4 @@
-from beverage import Beverage
+from beverage.beverage import Beverage
 
 
 class HotBeverages(Beverage):

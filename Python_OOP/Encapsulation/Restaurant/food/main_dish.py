@@ -1,4 +1,4 @@
-from food import Food
+from food.food import Food
 
 
 class MainDish(Food):
